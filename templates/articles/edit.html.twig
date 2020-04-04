@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Edit Article {% endblock %}
+
+{% block body %}
+    {{form_start(form)}}
+    {{form_widget(form)}}
+    <img src="{{asset('uploads/' ~ image)}}" alt="">
+    {{form_end(form)}}
+
+    
+{% endblock %}

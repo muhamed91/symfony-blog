@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	My First Project -  Articles
+{% endblock %}
+
+{% block body %}
+
+    
+  <h1>{{article.title}}</h1>
+  <p>{{article.body}}</p>
+  <img src="{{asset('uploads/' ~ article.image)}}" alt="">
+
+
+  <hr>
+
+  <p> Published on: {{ article.getDate|date('d.m.Y') }}</p>
+
+  <a href="/">Go Back</a>
+{% endblock %}
